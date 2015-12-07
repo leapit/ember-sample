@@ -1,0 +1,12 @@
+{{#each model as |post|}}
+<p>Title:<a href="post/{{post.id}}"> {{post.name}} </a></p>
+
+  {{#link-to 'post' post.id}}
+    {{post.name}}
+  {{/link-to}},
+
+<p>Creator: {{post.creator}}</p>
+<p>Date: {{post.date}}</p>
+<p>Content: {{post.content}}</p>
+{{/each}}
+{{outlet}}
